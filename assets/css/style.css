@@ -11,7 +11,7 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid #36454f; 
+  border: 6px solid #040615; 
   border-radius: 50% !important;
 }
 
@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: #36454f;
+  color: #040615;
 }
 
 /* main blockqoute */
@@ -237,7 +237,7 @@ ul.side-nav li {
 
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: #36454f;
+  color: #040615;
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
@@ -356,7 +356,7 @@ h3 {
 }
 
 .overlay {
-  background-color: #36454f;
+  background-color: #040615;
   height: 100%;
   left: 0;
   position: absolute;
@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #36454f !important;
+  border-bottom: 3px solid #040615 !important;
 }
 
 #skills .card.large {
@@ -549,7 +549,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #36454f !important;
+  color: #040615 !important;
 }
 
 /* .teal-text {
@@ -559,7 +559,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #36454f !important;
+  background-color: #040615 !important;
 }
 
 /* .teal {
