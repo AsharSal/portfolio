@@ -65,6 +65,14 @@
   color: grey;
 }
 
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  position: absolute;
+  border-radius: 15px;
+}
+
 .icon-btn:hover {
   transform: scale(1.10);
   color: #FFFFFF;
@@ -72,6 +80,9 @@
 
 .linkedin:hover {
   background-color: #0077b5;
+}
+.gmail:hover {
+  background-color: #c71610;
 }
 
 .angellist:hover {
