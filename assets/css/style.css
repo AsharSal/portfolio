@@ -813,9 +813,9 @@ h2.zoom:not(:hover) {
     position: relative;
     top: 64px;
   }
-  section#intro {
+  /* section#intro {
     margin-bottom: -64px;
-  }
+  } */
   .card .role {
     position: relative;
     right: initial;
