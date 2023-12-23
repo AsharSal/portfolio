@@ -51,6 +51,13 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.page-title {
+  transition: transform 0.2s ease-in-out;
+}
+.page-title:hover {
+  transform: scale(1.1);
+}
+
 .github {
   color: black;
 }
