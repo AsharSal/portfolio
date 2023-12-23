@@ -52,10 +52,10 @@
 }
 
 .page-title {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in;
 }
 .page-title:hover {
-  transform: scale(1.1);
+  transform: scale(1.0);
 }
 
 .github {
