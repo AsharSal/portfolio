@@ -1,27 +1,14 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Google Tag Manager -->
-
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/portfolio/assets/css/style.css" />
-  <title>Full Stack Web Developer | Ashar Saleem
-  </title>
-
-
-
+  <title>Full Stack Web Developer | Ashar Saleem</title>
   <meta name="author" content="Ashar Saleem" />
   <meta name="description" content="Software Developer with a passion for backend development" />
+  
+  <!-- Favicon links preserved from original -->
   <link rel="apple-touch-icon" sizes="57x57" href="/portfolio/assets/img/favicon/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/portfolio/assets/img/favicon/apple-icon-60x60.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="/portfolio/assets/img/favicon/apple-icon-72x72.png" />
@@ -40,300 +27,445 @@
   <meta name="msapplication-TileImage" content="/portfolio/assets/img/favicon/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="index, follow" />
-
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom styles -->
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .bg-hero {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('/portfolio/assets/img/bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-card {
+      transition: all 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
 </head>
 
-<body>
+<body class="font-sans bg-gray-50 text-gray-800">
+  <!-- Mobile Navigation Menu -->
+  <div class="lg:hidden">
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#intro" class="text-primary-600 font-bold text-xl">Ashar Saleem</a>
+          </div>
+          <div class="flex items-center">
+            <button id="mobile-menu-button" class="text-gray-500 hover:text-primary-600 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div id="mobile-menu" class="hidden bg-white shadow-md pb-3">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">About</a>
+          <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Skills</a>
+          <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Education</a>
+          <a href="/portfolio/assets/resume/Resume_Ashar_Saleem.pdf" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Resume</a>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/portfolio/assets/img/passport-new.jpeg" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-
-
-      <li class="bold">
-
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-
-
-      <li class="bold">
-
-        <a aria-label="Open Ashar's resume in a new tab" href="/portfolio/assets/resume/Resume_Ashar_Saleem.pdf"
-          target="_blank" class="waves-effect waves-dark teal-text"><i
-            class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Ashar
-        Saleem</a><span class="black-text">Software Engineer</span>
+  <!-- Desktop Sidebar Navigation -->
+  <aside class="hidden lg:block fixed inset-y-0 left-0 bg-white shadow-lg w-64 z-10">
+    <div class="flex flex-col h-full">
+      <div class="flex flex-col items-center p-4 border-b">
+        <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+          <img src="/portfolio/assets/img/passport-new.jpeg" alt="Ashar Saleem" class="w-full h-full object-cover" />
+        </div>
+        <h2 class="text-xl font-bold text-gray-800">Ashar Saleem</h2>
+        <p class="text-sm text-gray-600">Software Engineer</p>
+      </div>
+      
+      <nav class="flex-1 px-4 py-6">
+        <ul class="space-y-2">
+          <li>
+            <a href="#about" class="flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors">
+              <i class="fas fa-user w-5 h-5 mr-3"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors">
+              <i class="fas fa-code w-5 h-5 mr-3"></i>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#education" class="flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors">
+              <i class="fas fa-graduation-cap w-5 h-5 mr-3"></i>
+              <span>Education</span>
+            </a>
+          </li>
+          <li>
+            <a href="/portfolio/assets/resume/Resume_Ashar_Saleem.pdf" target="_blank" class="flex items-center px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors">
+              <i class="fas fa-file-alt w-5 h-5 mr-3"></i>
+              <span>Resume</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="p-4 border-t">
+        <div class="flex justify-center space-x-4">
+          <a href="https://www.linkedin.com/in/ashar-saleem-94976a114/" target="_blank" class="text-gray-600 hover:text-primary-600 social-icon">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="https://github.com/AsharSal" target="_blank" class="text-gray-600 hover:text-primary-600 social-icon">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://medium.com/@asharsaleem4" target="_blank" class="text-gray-600 hover:text-primary-600 social-icon">
+            <i class="fab fa-medium text-xl"></i>
+          </a>
+          <a href="mailto:asharsaleem4@gmail.com" target="_blank" class="text-gray-600 hover:text-primary-600 social-icon">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
-  </nav>
+  </aside>
 
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Open Ashar's Resume in a new tab" href="/portfolio/assets/resume/Resume_Ashar_Saleem.pdf"
-          target="_blank" class="waves-effect waves-dark teal-text"><i
-            class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main Content-->
-  <main>
-    <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2 class="zoom">Hi, I'm <span class="teal">Ashar Saleem.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; "></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Energetic, forward-looking Software Engineer with 4+ years of experience in creating and executing
-                innovative software
-                solutions to enhance business productivity. Skilled at coordinating cross-functional teams in a
-                fast-paced, deadline-driven
-                environment.</h5>
-            </div>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/ashar-saleem-94976a114/" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/AsharSal" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-
-              <a href="https://medium.com/@asharsaleem4" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-medium"></i>
-                </button>
-              </a>
-
-              <a href="mailto:asharsaleem4@gmail.com" target="_blank">
-                <button class="icon-btn gmail">
-                  <i class="fa fa-envelope"></i>
-                </button>
-              </a>
-            </div>
+  <!-- Main Content -->
+  <main class="lg:ml-64">
+    <!-- Hero Section -->
+    <section id="intro" class="bg-hero min-h-screen flex items-center">
+      <div class="container mx-auto px-6 py-24 md:py-32">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Hi, I'm <span class="text-primary-400">Ashar Saleem.</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-gray-300 mb-6">
+            A <span id="typing" class="text-white font-light"></span>
+          </h2>
+          <p class="text-gray-300 text-lg mb-8 max-w-2xl">
+            Energetic, forward-looking Software Engineer with 4+ years of experience in creating and executing
+            innovative software solutions to enhance business productivity. Skilled at coordinating cross-functional teams in a
+            fast-paced, deadline-driven environment.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="https://www.linkedin.com/in/ashar-saleem-94976a114/" target="_blank" 
+               class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white p-3 rounded-full social-icon">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://github.com/AsharSal" target="_blank" 
+               class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white p-3 rounded-full social-icon">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://medium.com/@asharsaleem4" target="_blank" 
+               class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white p-3 rounded-full social-icon">
+              <i class="fab fa-medium text-xl"></i>
+            </a>
+            <a href="mailto:asharsaleem4@gmail.com" target="_blank" 
+               class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white p-3 rounded-full social-icon">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
           </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Second Section: About -->
-    <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal" style="color:#fff">About</h3>
-      <div class="container flow-text">
-
-
-        <p class="whiteteal"> Welcome to my portfolio website!</p>
-
-        <p class="whiteteal">
-
-          I am a senior developer with over 4+ years of experience in building and deploying web applications.
-          I have a strong background in various technologies such as MERN ,Laravel and AWS.
-          I have a deep understanding of software development methodologies and principles, as well as experience
-          leading and mentoring development teams.
-        </p>
-
-
-        <p class="whiteteal">
-          Throughout my career, I have had the opportunity to work on a wide range of projects, from small-scale
-          projects to large-scale enterprise applications.
-        </p>
-
-        <p class="whiteteal">
-          I am highly skilled in software development methodologies such as Agile and Scrum, and have experience leading
-          development teams through the entire software development lifecycle. I have a passion for creating
-          high-quality, maintainable code and am well-versed in software design patterns and best practices.
-        </p>
-
-        <p class="whiteteal">
-          In addition to my technical skills, I am an effective communicator and am able to work well with stakeholders,
-          project managers, and team members. I am always looking for ways to improve the development process and am
-          always willing to learn new technologies.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- Fifth Section: Skills -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal" style="color:#fff">Skills</h3>
-      <div class="container">
-        <!-- Languages and Databases -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Languages and Databases</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/mern.png" class="responsive-img" />
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/laravel-logo-png-transparent.png"
-                  class="responsive-img" />Laravel
-              </div>
-
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
-              </div>
-            </div>
-
-            <div class="row text-center">
-
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/dynamodb.png" class="responsive-img" />Dynamo-DB
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/parse.png" class="responsive-img" />Parse
-              </div>
-
-            </div>
-
-
-          </div>
-        </div>
-
-
-        <!-- Other -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
-
-
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/bitbucket-logo.svg" class="responsive-img" />Bitbucket
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/forge.png" class="responsive-img" />Forge
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/portfolio/assets/img/aws.png" class="responsive-img" />Aws
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Seventh Section: Education -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal" style="color:#fff">Education</h3>
-      <div class="container">
-        <div class="row">
-          <!-- Education -->
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://pucit.edu.pk/" target="_blank"
-                      class="teal-text hoverline">University of Punjab (PUCIT)</a></span>
-                </p>
-                <p class="brown-text">Lahore,Pakistan</p>
-                <p>
-                  <b>Degree: </b>Bachelor's in Computer Science (BSCS)
-                </p>
-
-              </div>
-            </div>
-
-
+          
+          <div class="mt-12">
+            <a href="#about" class="inline-flex items-center text-white hover:text-primary-300 transition-colors">
+              <span class="mr-2">Learn more about me</span>
+              <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">About Me</h2>
+          <div class="w-20 h-1 bg-primary-500 rounded-full"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg text-gray-700 mb-6">
+            Welcome to my portfolio website!
+          </p>
+          
+          <p class="text-lg text-gray-700 mb-6">
+            I am a senior developer with over 4+ years of experience in building and deploying web applications.
+            I have a strong background in various technologies such as MERN, Laravel and AWS.
+            I have a deep understanding of software development methodologies and principles, as well as experience
+            leading and mentoring development teams.
+          </p>
+          
+          <p class="text-lg text-gray-700 mb-6">
+            Throughout my career, I have had the opportunity to work on a wide range of projects, from small-scale
+            projects to large-scale enterprise applications.
+          </p>
+          
+          <p class="text-lg text-gray-700 mb-6">
+            I am highly skilled in software development methodologies such as Agile and Scrum, and have experience leading
+            development teams through the entire software development lifecycle. I have a passion for creating
+            high-quality, maintainable code and am well-versed in software design patterns and best practices.
+          </p>
+          
+          <p class="text-lg text-gray-700 mb-6">
+            In addition to my technical skills, I am an effective communicator and am able to work well with stakeholders,
+            project managers, and team members. I am always looking for ways to improve the development process and am
+            always willing to learn new technologies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Skills</h2>
+          <div class="w-20 h-1 bg-primary-500 rounded-full"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <!-- Languages and Databases -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden mb-10 skill-card">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">Languages and Databases</h3>
+              
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/mern.png" alt="MERN Stack" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">MERN Stack</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/laravel-logo-png-transparent.png" alt="Laravel" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">Laravel</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/mysql-logo-1-300x300.jpg" alt="MySQL" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">MySQL</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/postgresql-logo.png" alt="PostgreSQL" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">PostgreSQL</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/dynamodb.png" alt="DynamoDB" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">DynamoDB</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/parse.png" alt="Parse" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">Parse</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other Skills -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden skill-card">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">Other Skills</h3>
+              
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/git.png" alt="Git" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">Git</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/bitbucket-logo.svg" alt="Bitbucket" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">Bitbucket</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/forge.png" alt="Forge" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">Forge</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="w-20 h-20 flex items-center justify-center mb-3">
+                    <img src="/portfolio/assets/img/aws.png" alt="AWS" class="max-h-full" />
+                  </div>
+                  <span class="text-gray-700">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Education</h2>
+          <div class="w-20 h-1 bg-primary-500 rounded-full"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="p-8">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    <a href="https://pucit.edu.pk/" target="_blank" class="text-primary-600 hover:text-primary-700">
+                      University of Punjab (PUCIT)
+                    </a>
+                  </h3>
+                  <p class="text-gray-600 mb-4">Lahore, Pakistan</p>
+                </div>
+                <div class="md:text-right">
+                  <span class="inline-block bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full">
+                    Bachelor's Degree
+                  </span>
+                </div>
+              </div>
+              
+              <p class="text-gray-700 mt-4">
+                <span class="font-semibold">Degree:</span> Bachelor's in Computer Science (BSCS)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold">Ashar Saleem</h2>
+            <p class="text-gray-400">Software Engineer</p>
+          </div>
+          
+          <div class="flex space-x-6">
+            <a href="https://www.linkedin.com/in/ashar-saleem-94976a114/" target="_blank" class="text-gray-400 hover:text-white social-icon">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://github.com/AsharSal" target="_blank" class="text-gray-400 hover:text-white social-icon">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://medium.com/@asharsaleem4" target="_blank" class="text-gray-400 hover:text-white social-icon">
+              <i class="fab fa-medium text-xl"></i>
+            </a>
+            <a href="mailto:asharsaleem4@gmail.com" target="_blank" class="text-gray-400 hover:text-white social-icon">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Ashar Saleem. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <!-- typed.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing', {
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Initialize Typed.js
+    var typed = new Typed('#typing', {
       strings: ["Passionate Software Engineer", "Full Stack Developer", "Fast Learner"],
-      loop: true,
       typeSpeed: 80,
-      backSpeed: 40
+      backSpeed: 40,
+      loop: true
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
   </script>
-
-
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
-  </script>
 </body>
-
 </html>
